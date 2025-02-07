@@ -36,4 +36,7 @@ item_names = ...
     "iron_stick"
     "copper_cable"
     "electronic_circuit"
+
+    % Science packs
+    "automation_science_pack"
 ];

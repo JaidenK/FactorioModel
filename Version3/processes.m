@@ -59,6 +59,19 @@ processes_struct(end).ResourceNames = ["electronic_circuit" "copper_cable" "iron
 processes_struct(end).ResourceValues = [1 -3 -1];
 processes_struct(end).DefaultMachine = "assembling_machine_3";
 
+processes_struct(end+1).Name = "iron_gear_wheel_crafting";
+processes_struct(end).Period = 0.5;
+processes_struct(end).ResourceNames = ["iron_gear_wheel" "iron_plate"];
+processes_struct(end).ResourceValues = [1 -2];
+processes_struct(end).DefaultMachine = "assembling_machine_3";
+
+% Science
+processes_struct(end+1).Name = "automation_science_pack_crafting";
+processes_struct(end).Period = 5;
+processes_struct(end).ResourceNames = ["automation_science_pack" "iron_gear_wheel" "copper_plate"];
+processes_struct(end).ResourceValues = [1 -1 -1];
+processes_struct(end).DefaultMachine = "assembling_machine_3";
+
 % Transpose the array because I want it to be a "column vector"
 processes_struct = processes_struct';
 
