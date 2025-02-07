@@ -16,7 +16,7 @@ if(size(x,2) == 1)
 else
     assert(size(x,2) == length(machine_names),"Invalid dimensons")
     [rows,cols,values] = find(x);
-    disp("Non-zero processes:");
+    %disp("Non-zero processes:");
     for i = 1:length(rows)
         %disp(processes_struct(rows(i)).Name + ":" + machine_names(cols(i)) + ": " + values(i));
         fprintf("%s\t%s\t%g\n",processes_struct(rows(i)).Name,machine_names(cols(i)),values(i));

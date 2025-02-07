@@ -3,7 +3,7 @@ function display_rates(a)
 global item_names
 assert(isequal(size(a),size(item_names)),"Rate vector must match dimensions of item names.");
 [rows,~,values] = find(a);
-disp("Non-zero rates:");
+%disp("Non-zero rates:");
 for i = 1:length(rows)
     disp(item_names(rows(i)) + ": " + values(i));
 end
