@@ -1,0 +1,33 @@
+classdef process    
+    properties
+        unit_rates % Resources consumed per cycle of the process. Vector.
+        duration   % Duration of 1 cycle of the process. Scalar.
+        rates      % Resources consumed per second. Vector.
+    end
+    
+    methods
+        function obj = process(unit_rates,duration)
+            obj.unit_rates = unit_rates;
+            obj.duration = duration;
+            obj.rates = unit_rates/duration;
+        end
+    end
+
+    enumeration
+        mining_stone ...
+            (1*resource.stone.u, ...
+            1)
+        mining_coal ...
+            (1*resource.coal.u, ...
+            1)
+        mining_iron ...
+            (1*resource.iron_ore.u, ...
+            1)
+        crafting_stone_furnace ...
+            (1*resource.stone_furnace.u - 5*resource.stone.u, ...
+            0.5)
+        smelting_iron_plate ...
+            (1*resource.iron_plate.u - 1*resource.iron_ore.u, ...
+            3.2)
+    end
+end
